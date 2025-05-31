@@ -3,10 +3,10 @@
 
 A full-stack chat application deployed on Kubernetes, featuring:  
 
-- 🎨 **React** frontend  
-- ⚙️ **Node.js** backend  
-- 🛢️ **MongoDB** database  
-- 📡 Exposed via **NGINX Ingress Controller**  
+- 🎨 React frontend  
+- ⚙️ Node.js backend  
+- 🛢️ MongoDB database  
+- 📡 Exposed via NGINX Ingress Controller 
 
 ---
  
@@ -113,4 +113,3 @@ For questions or feedback:
 
 ---
 
-This version is **fully cleaned up**—all links removed, and badge images **rendered properly**! 🚀 Ready to copy and save as `README.md`. Anything else you need?
