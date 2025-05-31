@@ -9,7 +9,7 @@ A full-stack chat application deployed on Kubernetes, featuring:
 - 📡 Exposed via **NGINX Ingress Controller**  
 
 ---
-
+ 
 ## 🏗️ Tech Stack  
 
 This project uses the following technologies:  
