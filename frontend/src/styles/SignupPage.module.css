@@ -1,0 +1,78 @@
+/* Ensure all input fields have the same size */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure password fields match username field size */
+.passwordContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.passwordContainer input {
+    padding: 12px; /* Matches username field padding */
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Password toggle button (👀 🙈) inside the field aligned to the right */
+.toggleButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* Centering container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Styling for login/signup box */
+.box {
+    width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff, #e3f2fd);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Form container for input fields */
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Login and Signup button styling */
+.submitButton {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}

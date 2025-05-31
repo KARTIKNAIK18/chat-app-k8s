@@ -1,0 +1,115 @@
+/* Centering container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff, #e3f2fd);
+}
+
+/* Styling for login/signup box */
+.box {
+    width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff, #dfe9f3);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Form container for input fields */
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Styled input fields */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #0056b3;
+    background-color: #e3f2fd;
+}
+
+/* Password field container */
+.passwordContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Password field styling */
+.passwordContainer input {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Password toggle button */
+.toggleButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggleButton:hover {
+    color: #0056b3;
+}
+
+/* Login and Signup button styling */
+.submitButton {
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Signup link styling */
+.signup-link {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

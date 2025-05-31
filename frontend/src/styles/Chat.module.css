@@ -1,0 +1,167 @@
+/* Chat Container */
+.chatContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e1e2f, #2e2e3f);
+}
+
+/* Sidebar */
+.userList {
+    width: 25%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* User Item */
+.userItem {
+    padding: 12px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.userItem:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Chat Box */
+.chatBox {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    color: white;
+}
+
+/* Message Area */
+.messageArea {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message Animations */
+.messageArea p {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 75%;
+    word-break: break-word;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+
+.sent {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #4a90e2, #007bff);
+    color: white;
+    position: relative;
+}
+
+.received {
+    align-self: flex-start;
+    background: linear-gradient(135deg, #6c757d, #343a40);
+    color: white;
+}
+
+/* Read Receipt Icon */
+.sent::after {
+    font-size: 14px;
+    color: #ffd700;
+    margin-left: 8px;
+}
+
+
+/* Typing Indicator */
+.typingIndicator {
+    font-size: 14px;
+    color: #ffa726;
+    font-style: italic;
+    margin-left: 10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Input Field */
+.chatBox input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.chatBox input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Send Button */
+.chatBox button {
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ff7eb3, #ff4d6d);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@keyframes floatingParticles {
+    0% { opacity: 0.4; transform: translateY(0px) scale(1); }
+    50% { opacity: 0.7; transform: translateY(-20px) scale(1.1); }
+    100% { opacity: 0.4; transform: translateY(0px) scale(1); }
+}
+
+.chatContainer::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: floatingParticles 8s infinite ease-in-out;
+}
+@keyframes messagePop {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.sent {
+    animation: messagePop 0.3s ease-in-out;
+}
+.received {
+    animation: messagePop 0.3s ease-in-out;
+}
+
+@keyframes  messageArea {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
