@@ -20,7 +20,7 @@ A full-stack chat application deployed on Kubernetes, featuring:
 
 This project uses the following technologies:  
 
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React Logo"/>  
+https://img.shields.io/bundlephobia/:format/:packageName
 <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js Logo"/>  
 <img src="https://img.shields.io/badge/mongodb-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Logo"/>  
 <img src="https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes Logo"/>  
