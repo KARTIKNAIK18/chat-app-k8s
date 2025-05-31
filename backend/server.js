@@ -12,15 +12,16 @@ const io = new Server(server, { cors: { origin: "*" } });
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/chatdb", { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("✅ Connected to MongoDB"))
-    .catch((error) => console.error("❌ MongoDB connection error:", error));
+const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/chatdb";
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("✅ Connected to MongoDB"))
+  .catch((error) => console.error("❌ MongoDB connection error:", error));
 
 const userSchema = new mongoose.Schema({ username: String, password: String });
 const User = mongoose.model("User", userSchema);
 
 const activeUsers = new Map();
-
 io.on("connection", (socket) => {
     console.log("✅ New client connected:", socket.id);
 
