@@ -1,5 +1,4 @@
 ---
-```markdown
 # 🚀 Realtime-ChatApp Kubernetes Deployment  
 
 A full-stack chat application deployed on Kubernetes, featuring:  
