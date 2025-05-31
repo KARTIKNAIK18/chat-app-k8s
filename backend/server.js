@@ -12,7 +12,7 @@ const io = new Server(server, { cors: { origin: "*" } });
 app.use(express.json());
 app.use(cors());
 
-const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/chatdb";
+const mongoURI = process.env.MONGODB_URI || "mongodb://mongoadmin:secret@mongodb-service:27017/chatdb?authSource=admin";
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("✅ Connected to MongoDB"))

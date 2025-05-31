@@ -17,9 +17,11 @@ spec:
     spec:
       containers:
       - name: chat-app-backend       
-        image: kartiknaik/chat-backend-app:latest
+        image: kartiknaik/chat-back-end-app-last:latest
         ports:
         - containerPort: 5000
         env:
         - name: MONGODB_URI
-          value: mongodb://root:root@mongodb-service:27017
+          value: mongodb://mongoadmin:secret@mongodb-service:27017/chatdb?authSource=admin
+
+
